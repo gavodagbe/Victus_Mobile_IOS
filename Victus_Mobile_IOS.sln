@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Victus_Mobile_IOS", "Victus_Mobile_IOS\Victus_Mobile_IOS.csproj", "{67CE36AF-690D-406B-917F-62EB05C5315A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67CE36AF-690D-406B-917F-62EB05C5315A}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{67CE36AF-690D-406B-917F-62EB05C5315A}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{67CE36AF-690D-406B-917F-62EB05C5315A}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{67CE36AF-690D-406B-917F-62EB05C5315A}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{67CE36AF-690D-406B-917F-62EB05C5315A}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{67CE36AF-690D-406B-917F-62EB05C5315A}.Debug|iPhone.Build.0 = Debug|iPhone
+		{67CE36AF-690D-406B-917F-62EB05C5315A}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{67CE36AF-690D-406B-917F-62EB05C5315A}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{67CE36AF-690D-406B-917F-62EB05C5315A}.Release|iPhone.ActiveCfg = Release|iPhone
+		{67CE36AF-690D-406B-917F-62EB05C5315A}.Release|iPhone.Build.0 = Release|iPhone
+		{67CE36AF-690D-406B-917F-62EB05C5315A}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{67CE36AF-690D-406B-917F-62EB05C5315A}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Victus_Mobile_IOS\Victus_Mobile_IOS.csproj
+	EndGlobalSection
+EndGlobal
