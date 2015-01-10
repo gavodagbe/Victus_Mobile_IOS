@@ -27,13 +27,14 @@ namespace Victus_Mobile_IOS
 		{
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			
+
 			// If you have defined a root view controller, set it here:
-			// window.RootViewController = myViewController;
-			
+			loginView mainControler = new loginView ();
+			window.RootViewController = mainControler;
+
 			// make the window visible
 			window.MakeKeyAndVisible ();
-			
+
 			return true;
 		}
 	}

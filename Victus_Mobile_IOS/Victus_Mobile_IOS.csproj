@@ -103,6 +103,12 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\fond_sxo_1.jpg" />
+    <BundleResource Include="Resources\fond_sxo_2.png" />
+    <BundleResource Include="Resources\header_sxo.png" />
+    <BundleResource Include="Resources\header_sxo_1.jpg" />
+    <BundleResource Include="Resources\logo - copie.png" />
+    <BundleResource Include="Resources\logo.PNG" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -115,6 +121,10 @@
     <Compile Include="Classes\EmptyClass.cs" />
     <Compile Include="Classes\networkManager.cs" />
     <Compile Include="Classes\parseManager.cs" />
+    <Compile Include="Controllers\boardView.cs" />
+    <Compile Include="Controllers\boardView.designer.cs" />
+    <Compile Include="Controllers\loginView.cs" />
+    <Compile Include="Controllers\loginView.designer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -128,5 +138,9 @@
     <Folder Include="Controllers\" />
     <Folder Include="Tools\" />
     <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Views\boardView.xib" />
+    <InterfaceDefinition Include="Views\loginView.xib" />
   </ItemGroup>
 </Project>
