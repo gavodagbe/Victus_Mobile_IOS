@@ -20,12 +20,20 @@ namespace Victus_Mobile_IOS
 
 		[Outlet]
 		UIKit.UITextField InputUser { get; set; }
+
+		[Outlet]
+		UIKit.UITableView loginTableObj { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (InputUser != null) {
-				InputUser.Dispose ();
-				InputUser = null;
+			if (loginTableObj != null) {
+				loginTableObj.Dispose ();
+				loginTableObj = null;
+			}
+
+			if (ConnexionButton != null) {
+				ConnexionButton.Dispose ();
+				ConnexionButton = null;
 			}
 
 			if (InputPwd != null) {
@@ -33,9 +41,9 @@ namespace Victus_Mobile_IOS
 				InputPwd = null;
 			}
 
-			if (ConnexionButton != null) {
-				ConnexionButton.Dispose ();
-				ConnexionButton = null;
+			if (InputUser != null) {
+				InputUser.Dispose ();
+				InputUser = null;
 			}
 		}
 	}

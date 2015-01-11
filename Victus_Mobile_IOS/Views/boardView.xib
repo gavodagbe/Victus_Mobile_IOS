@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="boardView">
             <connections>
+                <outlet property="imageBoard" destination="wxy-Nx-kTg" id="Ocu-FH-54I"/>
+                <outlet property="nbDiDTToValid" destination="yrG-c1-lWx" id="Ggc-d8-Rmw"/>
+                <outlet property="nbDiDafToValid" destination="XVF-hr-4r1" id="Yp5-Xd-zeg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
             </connections>
         </placeholder>
@@ -14,17 +17,17 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wxy-Nx-kTg">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="231"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1041355020100008.PNG" highlightedImage="1041355020100008.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="wxy-Nx-kTg">
+                    <rect key="frame" x="8" y="37" width="304" height="231"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVF-hr-4r1">
-                    <rect key="frame" x="8" y="239" width="304" height="39"/>
+                    <rect key="frame" x="8" y="276" width="304" height="39"/>
                     <state key="normal" title="Nombre de DI en attende de validation">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrG-c1-lWx">
-                    <rect key="frame" x="8" y="280" width="304" height="39"/>
+                    <rect key="frame" x="8" y="317" width="304" height="39"/>
                     <state key="normal" title="Nombre de DI à valider">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -34,6 +37,9 @@
             <point key="canvasLocation" x="280" y="355"/>
         </view>
     </objects>
+    <resources>
+        <image name="1041355020100008.PNG" width="280" height="150"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

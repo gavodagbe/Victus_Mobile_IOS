@@ -97,6 +97,7 @@
     </Reference>
     <Reference Include="MonoTouch.Dialog-1" />
     <Reference Include="System.Json" />
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -109,6 +110,12 @@
     <BundleResource Include="Resources\header_sxo_1.jpg" />
     <BundleResource Include="Resources\logo - copie.png" />
     <BundleResource Include="Resources\logo.PNG" />
+    <BundleResource Include="Resources\1041355020100008.PNG" />
+    <BundleResource Include="Resources\exit.png" />
+    <BundleResource Include="Resources\combo_chart.png" />
+    <BundleResource Include="Resources\home.png" />
+    <BundleResource Include="Resources\list.png" />
+    <BundleResource Include="Resources\numbered_list.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

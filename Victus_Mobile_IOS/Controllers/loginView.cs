@@ -43,12 +43,18 @@ namespace Victus_Mobile_IOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
+
+			//
+			this.View.BackgroundColor = UIColor.Gray;
+
 			// Perform any additional setup after loading the view, typically from a nib.
 			// Style appliqué au button de connexion
 			ConnexionButton.Layer.BorderWidth = 1F;
-			ConnexionButton.Layer.BorderColor = UIColor.Black.CGColor;
+			//ConnexionButton.Layer.BorderColor = UIColor.Black.CGColor;
 			ConnexionButton.Layer.CornerRadius = 4;
+
+			// Style de la table du login
+			loginTableObj.Layer.BackgroundColor = UIColor.Gray.CGColor;
 
 			//Actio du bouton connexion
 			ConnexionButton.TouchUpInside += (object sender, EventArgs e) => {
@@ -75,8 +81,8 @@ namespace Victus_Mobile_IOS
 
 				//Envoie au WS de connexion
 				//string resultConnection = Victus_Mobile_IOS.networkManager.callURL("http://vincennes.votreextranet.fr/services/Logger/login.cfm?loginPassword="+connectionToken+"&loginUsername="+userName,"");
-				string resultConnection = Victus_Mobile_IOS.networkManager.callURL("http://192.168.0.221/victus/services/Logger/login.cfm?loginPassword="+connectionToken+"&loginUsername="+userName+"&CFID="+NSUserDefaults.StandardUserDefaults["CFID"]+"&CFTOKEN="+NSUserDefaults.StandardUserDefaults["CFTOKEN"],"");
-				//string resultConnection = Victus_Mobile_IOS.networkManager.callURL("http://victuspp.sourceamax.com/services/Logger/login.cfm?loginPassword="+connectionToken+"&loginUsername="+userName+"&CFID="+NSUserDefaults.StandardUserDefaults["CFID"]+"&CFTOKEN="+NSUserDefaults.StandardUserDefaults["CFTOKEN"],"");
+				//string resultConnection = Victus_Mobile_IOS.networkManager.callURL("http://192.168.0.221/victus/services/Logger/login.cfm?loginPassword="+connectionToken+"&loginUsername="+userName+"&CFID="+NSUserDefaults.StandardUserDefaults["CFID"]+"&CFTOKEN="+NSUserDefaults.StandardUserDefaults["CFTOKEN"],"");
+				string resultConnection = Victus_Mobile_IOS.networkManager.callURL("http://victuspp.sourceamax.com/services/Logger/login.cfm?loginPassword="+connectionToken+"&loginUsername="+userName+"&CFID="+NSUserDefaults.StandardUserDefaults["CFID"]+"&CFTOKEN="+NSUserDefaults.StandardUserDefaults["CFTOKEN"],"");
 
 				//Parse le résultat
 				JsonValue jsonResult = Victus_Mobile_IOS.parseManager.parseJSON(resultConnection);
@@ -96,26 +102,38 @@ namespace Victus_Mobile_IOS
 					//navigation.View.Frame = UIScreen.MainScreen.Bounds;
 
 					// Create the menu:
-
+					/*
+					 * TODO : Rendre dynamique cette partie création des menus.
+					*/
+					var headerSettings = new UIImageView (UIImage.FromFile ("logo.png"));
 					navigation.NavigationRoot = new RootElement (string.Empty) {
-						new Section () {
-							from page in Tasks
+						new Section (headerSettings) {
+							/*from page in Tasks
 							select new ImageStringElement(page.ToUpper(), delegate {
 								Console.WriteLine(page.ToUpper());
-							}, UIImage.FromFile("logo.PNG")) as Element,
+							}, UIImage.FromFile("exit.PNG")) as Element,*/
 
+							new ImageStringElement("Accueil", delegate {
+							}, UIImage.FromFile("home.PNG")),
+							new ImageStringElement("Liste des DI", delegate {
+							}, UIImage.FromFile("list.PNG")),
+							new ImageStringElement("Liste des Plans", delegate {
+							}, UIImage.FromFile("numbered_list.PNG")),
+							new ImageStringElement("Liste des Budgets", delegate {
+							}, UIImage.FromFile("combo_chart.PNG")),
+							new ImageStringElement("Se Déconnecter", delegate {
+								//new UIAlertView("DECONNEXION", "Se déconnecter ?", null, "VALIDER", "QUITTER").Show();
+							}, UIImage.FromFile("exit.PNG")),
 						}
 
 					};
 
+
 					// Style sur le Menu
-					navigation.NavigationTableView.SeparatorColor = UIColor.Red;
 					navigation.NavigationTableView.BackgroundColor = UIColor.Gray;
 
-					// Create an array of UINavigationControllers that correspond to your
-					// menu items:
-
-					/*
+					/* 
+					 * Create an array of UINavigationControllers that correspond to your menu items:
 					 * TODO : Rendre dynamique cette partie.
 					*/
 					navigation.ViewControllers = new [] {
@@ -133,19 +151,9 @@ namespace Victus_Mobile_IOS
 					NavigationItem.LeftBarButtonItem = new UIBarButtonItem (UIBarButtonSystemItem.Action, delegate {
 						navigation.ToggleMenu ();
 					});
-
-
-
-
 				}else{
-					Console.WriteLine("Connexion KO");
-					new UIAlertView("ERREUR", "Login ou mot de passe incorrect. Veuillez Réessayer.\n Merci."
-						, null, "VALIDER", "QUITTER").Show();
-					//Sinon vide le champs mot de passe et met un message d'erreur
-					InputPwd.Text = "";
-					//labelError.Text = "Erreur d'authentification";
+					new UIAlertView("ERREUR", "Login ou mot de passe incorrect. Veuillez Réessayer.\n Merci.", null, "VALIDER", "QUITTER").Show();
 				}
-
 			};
 		}
 
@@ -166,8 +174,8 @@ namespace Victus_Mobile_IOS
 
 		public string getToken(){
 			//return Victus_Mobile_IOS.networkManager.callURL("http://vincennes.votreextranet.fr/services/Logger/getToken.cfm","");
-			return Victus_Mobile_IOS.networkManager.callURL("http://192.168.0.221/victus/services/Logger/getToken.cfm","");
-			//return Victus_Mobile_IOS.networkManager.callURL("http://victuspp.sourceamax.com/services/Logger/getToken.cfm","");
+			//return Victus_Mobile_IOS.networkManager.callURL("http://192.168.0.221/victus/services/Logger/getToken.cfm","");
+			return Victus_Mobile_IOS.networkManager.callURL("http://victuspp.sourceamax.com/services/Logger/getToken.cfm","");
 		}
 	}
 }

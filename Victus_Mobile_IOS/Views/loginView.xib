@@ -7,8 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="loginView">
             <connections>
                 <outlet property="ConnexionButton" destination="EGc-D6-JWj" id="IhE-4a-Goc"/>
-                <outlet property="InputPwd" destination="i6e-Ip-MdF" id="IVU-nM-bUw"/>
-                <outlet property="InputUser" destination="6jA-DF-3YC" id="179-Vb-FgU"/>
+                <outlet property="InputPwd" destination="s4l-Jz-m5A" id="7jM-LK-I8j"/>
+                <outlet property="InputUser" destination="unM-NR-QQQ" id="ca2-bv-pRu"/>
+                <outlet property="loginTableObj" destination="4lz-WN-qIh" id="wv5-wS-WpO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
             </connections>
         </placeholder>
@@ -17,26 +18,34 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fond_sxo_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rvm-HB-95J">
-                    <rect key="frame" x="0.0" y="-17" width="320" height="568"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fond_sxo_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="UVW-Vn-uks">
+                    <rect key="frame" x="0.0" y="16" width="320" height="552"/>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="sodexo" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="i6e-Ip-MdF">
-                    <rect key="frame" x="24" y="204" width="272" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGc-D6-JWj">
-                    <rect key="frame" x="24" y="242" width="272" height="30"/>
+                    <rect key="frame" x="24" y="246" width="272" height="30"/>
                     <color key="backgroundColor" red="0.36483980429292928" green="0.36483980429292928" blue="0.36483980429292928" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Se connecter">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="bruno.raffet" borderStyle="roundedRect" placeholder="Login de connexion" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6jA-DF-3YC">
-                    <rect key="frame" x="24" y="172" width="272" height="30"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="4lz-WN-qIh">
+                    <rect key="frame" x="24" y="157" width="272" height="83"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="godwin.avodagbe" placeholder="Utilisateur" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="unM-NR-QQQ">
+                    <rect key="frame" x="38" y="170" width="258" height="32"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="sodexo" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="s4l-Jz-m5A">
+                    <rect key="frame" x="38" y="206" width="258" height="32"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
